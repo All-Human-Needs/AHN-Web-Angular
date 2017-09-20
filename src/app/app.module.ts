@@ -14,6 +14,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { TabComponent } from './tab/tab.component';
 import { TabsComponent } from "./tab/tabs.component";
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -31,7 +32,8 @@ import { TabsComponent } from "./tab/tabs.component";
     MapPageComponent,
     SignInComponent,
     TabComponent,
-    TabsComponent
+    TabsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

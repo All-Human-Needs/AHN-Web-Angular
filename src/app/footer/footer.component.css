@@ -1,0 +1,13 @@
+/*edit height*/
+
+.footer {
+    background-color: gray;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}

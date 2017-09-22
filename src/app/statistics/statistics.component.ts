@@ -1,6 +1,5 @@
 
-import { TabComponent } from './../tab/tab.component';
-import { TabsComponent } from './../tab/tabs.component';
+
 import { Component, OnInit } from '@angular/core';
 
 

@@ -1,0 +1,20 @@
+.tab-header {
+    color: #000000;
+}
+
+.tab-header:hover {
+    color: #4B4A4A;
+}
+
+
+/* .nav-item .active {
+    border: 0px none rgba(0, 0, 0, 0) !important;
+} */
+
+.nav-item .active {
+    background-color: #6AD7F8;
+}
+
+.nav-item:hover {
+    background-color: #85AEB9;
+}

@@ -31,9 +31,7 @@ import { TabPanelComponent } from './statistics/tab-panel/tab-panel.component';
     StatisticsComponent,
     MapPageComponent,
     SignInComponent,
-    
     FooterComponent,
-    
     TabPanelComponent
   ],
   imports: [

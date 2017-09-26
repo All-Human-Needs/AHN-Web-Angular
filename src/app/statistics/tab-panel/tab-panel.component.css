@@ -18,3 +18,7 @@
 .nav-item:hover {
     background-color: #85AEB9;
 }
+
+#statsTab {
+    padding-top: 40px
+}

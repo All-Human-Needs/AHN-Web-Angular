@@ -15,6 +15,7 @@ import { AppRoutingModule } from "./app-routing.module";
 
 import { FooterComponent } from './footer/footer.component';
 import { TabPanelComponent } from './statistics/tab-panel/tab-panel.component';
+import { SpreadsheetComponent } from './statistics/spreadsheet/spreadsheet.component';
 
 
 
@@ -32,7 +33,8 @@ import { TabPanelComponent } from './statistics/tab-panel/tab-panel.component';
     MapPageComponent,
     SignInComponent,
     FooterComponent,
-    TabPanelComponent
+    TabPanelComponent,
+    SpreadsheetComponent
   ],
   imports: [
     BrowserModule,

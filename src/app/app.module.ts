@@ -16,10 +16,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { FooterComponent } from './footer/footer.component';
 import { TabPanelComponent } from './statistics/tab-panel/tab-panel.component';
 import { SpreadsheetComponent } from './statistics/spreadsheet/spreadsheet.component';
-
-
-
-
+import { MapFiltersComponent } from './map-page/map-filters/map-filters.component';
+import { MapSearchComponent } from './map-page/map-search/map-search.component';
+import { MapPlacesListComponent } from './map-page/map-places-list/map-places-list.component';
+import { MapComponent } from './map-page/map/map.component';
 
 
 @NgModule({
@@ -34,7 +34,11 @@ import { SpreadsheetComponent } from './statistics/spreadsheet/spreadsheet.compo
     SignInComponent,
     FooterComponent,
     TabPanelComponent,
-    SpreadsheetComponent
+    SpreadsheetComponent,
+    MapFiltersComponent,
+    MapSearchComponent,
+    MapPlacesListComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { AgmCoreModule } from '@agm/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
@@ -42,7 +43,10 @@ import { MapComponent } from './map-page/map/map.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey:'AIzaSyCP2Hh22RK96_fPIFSgIcBZ-_E48-yY4P0',
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

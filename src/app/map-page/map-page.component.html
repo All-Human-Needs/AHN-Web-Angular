@@ -1,11 +1,13 @@
-<p>
-  map-page works!
-</p>
-
-<app-map>
-  <app-map-search></app-map-search>
-</app-map>
+<app-map-search></app-map-search>
 
 <app-map-filters></app-map-filters>
 
 <app-map-places-list></app-map-places-list>
+
+
+<!-- actual map start -->
+
+<agm-map [latitude]="lat" [longitude]="lng" class ="map"></agm-map>
+
+
+<!-- actual map end -->

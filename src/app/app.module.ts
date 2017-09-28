@@ -20,7 +20,7 @@ import { SpreadsheetComponent } from './statistics/spreadsheet/spreadsheet.compo
 import { MapFiltersComponent } from './map-page/map-filters/map-filters.component';
 import { MapSearchComponent } from './map-page/map-search/map-search.component';
 import { MapPlacesListComponent } from './map-page/map-places-list/map-places-list.component';
-import { MapComponent } from './map-page/map/map.component';
+
 
 
 @NgModule({
@@ -39,7 +39,6 @@ import { MapComponent } from './map-page/map/map.component';
     MapFiltersComponent,
     MapSearchComponent,
     MapPlacesListComponent,
-    MapComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,14 @@
-<app-map-search></app-map-search>
-
-<app-map-filters></app-map-filters>
-
-<app-map-places-list></app-map-places-list>
+<div>
 
 
-<!-- actual map start -->
+    <app-map-filters></app-map-filters>
 
-<agm-map [latitude]="lat" [longitude]="lng" class ="map"></agm-map>
+    <app-map-places-list></app-map-places-list>
 
 
-<!-- actual map end -->
+    <!-- actual map start -->
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" class="map">
+        <app-map-search></app-map-search>
+        <app-map-places-list></app-map-places-list>
+    </agm-map>
+    <!-- actual map end -->

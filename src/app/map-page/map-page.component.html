@@ -1,3 +1,18 @@
-<p>
-  map-page works!
-</p>
+<div>
+
+
+    <app-map-filters></app-map-filters>
+
+    <app-map-places-list></app-map-places-list>
+
+
+    <!-- actual map start -->
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" class="map" [styles]="customStyle">
+        <app-map-search></app-map-search>
+
+        <agm-marker *ngFor="let l of locations; let i = index" [latitude]="l.lat" [longitude]="l.lng">
+        </agm-marker>
+
+
+    </agm-map>
+    <!-- actual map end -->

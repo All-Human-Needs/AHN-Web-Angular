@@ -1,6 +1,9 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
+import { MaterialsModule } from './materials/materials.module';
 
 import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
@@ -16,6 +19,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { FooterComponent } from './footer/footer.component';
 import { TabPanelComponent } from './statistics/tab-panel/tab-panel.component';
 import { SpreadsheetComponent } from './statistics/spreadsheet/spreadsheet.component';
+import { MenuIconComponent } from './menu-icon/menu-icon.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 
 
@@ -34,11 +39,16 @@ import { SpreadsheetComponent } from './statistics/spreadsheet/spreadsheet.compo
     SignInComponent,
     FooterComponent,
     TabPanelComponent,
-    SpreadsheetComponent
+    SpreadsheetComponent,
+    MenuIconComponent,
+    SideNavComponent,
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MaterialsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

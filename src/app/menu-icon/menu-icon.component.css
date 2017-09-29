@@ -1,0 +1,39 @@
+/* Menu Icon */
+
+.menuIcon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+/* Rotate first bar */
+
+.bar1.change {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+
+/* Fade out the second bar */
+
+.bar2.change {
+    opacity: 0;
+}
+
+
+/* Rotate last bar */
+
+.bar3.change {
+    -webkit-transform: rotate(45deg) translate(-9px, -6px);
+    transform: rotate(45deg) translate(-9px, -6px);
+}

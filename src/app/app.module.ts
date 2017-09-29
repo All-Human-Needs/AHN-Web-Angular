@@ -51,9 +51,13 @@ import { BarGraphComponent } from './statistics/bar-graph/bar-graph.component';
     FooterComponent,
     TabPanelComponent,
     SpreadsheetComponent,
-
     MenuIconComponent,
     SideNavComponent,
+    MapFiltersComponent,
+    MapSearchComponent,
+    MapPlacesListComponent,
+    LineChartComponent,
+    BarGraphComponent,
   
   ],
   imports: [
@@ -62,21 +66,13 @@ import { BarGraphComponent } from './statistics/bar-graph/bar-graph.component';
     AppRoutingModule,
     MaterialsModule,
 
-    MapFiltersComponent,
-    MapSearchComponent,
-    MapPlacesListComponent,
-    LineChartComponent,
-    BarGraphComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
+    
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyCP2Hh22RK96_fPIFSgIcBZ-_E48-yY4P0',
-    })
-    ChartsModule
-
+    }),
+    ChartsModule,
   ],
+  
   providers: [StatisticsService],
   bootstrap: [AppComponent]
 })

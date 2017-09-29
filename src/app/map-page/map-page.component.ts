@@ -19,7 +19,7 @@ export class MapPageComponent implements OnInit {
   ngOnInit() {
   }
 
-  public customStyle = [
+  customStyle = [
     {
       featureType: "poi",
       elementType: "labels",

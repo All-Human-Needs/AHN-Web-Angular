@@ -7,13 +7,12 @@
 
 
     <!-- actual map start -->
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" class="map" 
-        [styles]="customStyle">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" class="map" [styles]="customStyle">
+        <app-map-search></app-map-search>
 
         <agm-marker *ngFor="let l of locations; let i = index" [latitude]="l.lat" [longitude]="l.lng">
         </agm-marker>
 
-        <app-map-search></app-map-search>
-        <app-map-places-list></app-map-places-list>
+
     </agm-map>
     <!-- actual map end -->

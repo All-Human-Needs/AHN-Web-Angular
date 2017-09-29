@@ -5,7 +5,7 @@ import { AgmCoreModule } from '@agm/core';
 @Component({
   selector: 'app-map-page',
   templateUrl: './map-page.component.html',
-  styleUrls: ['./map-page.component.css']
+  styleUrls: ['./map-page.component.css',]
 })
 
 export class MapPageComponent implements OnInit {
@@ -18,6 +18,23 @@ export class MapPageComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  public customStyle = [
+    {
+      featureType: "poi",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+    },
+    {
+      featureType: "transit",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+    }
+  ]
 
   locations: marker[] = [
     {
@@ -67,4 +84,11 @@ interface marker {
   lat: number;
   lng: number;
   name: string;
+}
+
+export class GmapComponent implements OnInit {
+  
+
+  ngOnInit() {
+  }
 }

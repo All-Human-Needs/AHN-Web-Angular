@@ -1,0 +1,13 @@
+<md-sidenav-container>
+
+    <md-sidenav #sidenav mode="over" position="end" opened="false">
+        <!-- <span class="" style="float:right;" aria-hidden="true" (click)="sidenav.close()"><h2 class="h1" style="font-weight:bold;cursor:pointer;" >X</h2></span> Random Text Back At It Again -->
+        <i class="fa fa-times fa-border fa-pull-right fa-2x " style="cursor:pointer;" aria-hidden="true" (click)="sidenav.close()"></i>
+
+    </md-sidenav>
+    <ahn-banner [sidenav]="sidenav"></ahn-banner>
+
+    <router-outlet> </router-outlet>
+
+
+</md-sidenav-container>

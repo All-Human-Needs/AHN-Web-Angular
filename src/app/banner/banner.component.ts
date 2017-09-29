@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { SideNavComponent } from '../side-nav/side-nav.component';
+import { Component, Input, OnInit } from '@angular/core';
+import { MdSidenavModule } from "@angular/material";
 
 @Component({
   selector: 'ahn-banner',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
   title = 'All Human Needs';
-  constructor() { }
 
+  @Input()
+  sidenav;
+
+  constructor() {
+
+  }
+  
   ngOnInit() {
+    console.log(this.sidenav)
   }
 
 }

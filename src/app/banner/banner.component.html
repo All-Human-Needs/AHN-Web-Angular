@@ -1,12 +1,22 @@
-<div class="row banner">
-    <div class='col-md-3' style="background-color: #864040;color:black">
-        <h2>col-md-3</h2>
+<!-- <div class="row banner">
+
+    <div class="ta-center h1">
+        {{title}}
     </div>
-    <div class='col-md-6' style="background-color: #DA4848;color:black">
-        <h1 class="ta-center title" style="color:black">{{title}}</h1>
-    </div>
-    <div class='col-md-3' style="background-color: #940404;color:black ">
-        <h2>col-md-3</h2>
+    <menu-icon style="float:right;"></menu-icon>
+</div> -->
+
+<nav class="navbar navbar-expand-sm banner">
+    <div class="col-md-4">
+
     </div>
 
-</div>
+    <div class="col-md-4 navbar-collapse justify-content-sm-center">
+
+        <h2 class="title">{{title}}</h2>
+
+    </div>
+    <div class="col-md-4">
+        <i class="fa fa-bars fa-border fa-pull-right fa-2x " style="cursor:pointer;" aria-hidden="true" (click)="this.sidenav.open()"></i>
+    </div>
+</nav>

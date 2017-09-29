@@ -1,6 +1,19 @@
 .back-panel {
-    background-color: #9C9C9C;
+    background-color: rgba(224, 224, 224, 0.7);
     margin: 50px auto;
-    height: 720px;
-    width: 857px;
+    /* padding-top: 100px !important; */
+    height: 650px;
+    width: 900px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.tab-back-panel {
+    background-color: #858585;
+    height: 550px;
+    width: 900px;
+}
+
+.text {
+    padding: 30px 0px;
+    font-size: 3em;
 }

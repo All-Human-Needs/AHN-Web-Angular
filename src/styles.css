@@ -6,3 +6,9 @@
 * {
     font-family: 'Ubuntu', sans-serif;
 }
+
+body {
+    background-image: url("./assets/img/Cape-Town.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

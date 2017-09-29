@@ -1,3 +1,4 @@
+import { StatisticsService } from './statistics/statistics.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
@@ -16,7 +17,9 @@ import { AppRoutingModule } from "./app-routing.module";
 import { FooterComponent } from './footer/footer.component';
 import { TabPanelComponent } from './statistics/tab-panel/tab-panel.component';
 import { SpreadsheetComponent } from './statistics/spreadsheet/spreadsheet.component';
-
+import { ChartsModule } from 'ng2-charts';
+import { LineChartComponent } from './statistics/line-chart/line-chart.component';
+import { BarGraphComponent } from './statistics/bar-graph/bar-graph.component';
 
 
 
@@ -34,13 +37,16 @@ import { SpreadsheetComponent } from './statistics/spreadsheet/spreadsheet.compo
     SignInComponent,
     FooterComponent,
     TabPanelComponent,
-    SpreadsheetComponent
+    SpreadsheetComponent,
+    LineChartComponent,
+    BarGraphComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
-  providers: [],
+  providers: [StatisticsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

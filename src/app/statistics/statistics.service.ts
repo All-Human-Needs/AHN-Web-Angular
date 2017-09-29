@@ -1,7 +1,8 @@
+import { DailyFootTraffic } from './foot-traffic-stats';
 import { Injectable } from '@angular/core';
 
-import { DailyStatistcs } from './mock-daily';
-import { DailyStats } from './dailyStats';
+import { DailyStatistics } from './mock-daily';
+
 
 
 @Injectable()
@@ -9,8 +10,12 @@ export class StatisticsService {
 
   constructor() { }
 
-  getDailyStatistics(): Promise<DailyStats[]>{
-    return Promise.resolve(DailyStatistcs);
+  getDailyStatistics(): Promise<DailyFootTraffic[]>{
+    return Promise.resolve(DailyStatistics);
   }
+
+  // getDailyTimes(): Promise<Date[]>{
+  //   return Promise.resolve(DailyStatistcs);
+  // }
 
 }

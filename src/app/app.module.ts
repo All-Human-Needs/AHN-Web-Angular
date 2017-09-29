@@ -1,4 +1,6 @@
+
 import { AgmCoreModule } from '@agm/core';
+import { StatisticsService } from './statistics/statistics.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
@@ -20,7 +22,9 @@ import { SpreadsheetComponent } from './statistics/spreadsheet/spreadsheet.compo
 import { MapFiltersComponent } from './map-page/map-filters/map-filters.component';
 import { MapSearchComponent } from './map-page/map-search/map-search.component';
 import { MapPlacesListComponent } from './map-page/map-places-list/map-places-list.component';
-
+import { ChartsModule } from 'ng2-charts';
+import { LineChartComponent } from './statistics/line-chart/line-chart.component';
+import { BarGraphComponent } from './statistics/bar-graph/bar-graph.component';
 
 
 @NgModule({
@@ -39,6 +43,8 @@ import { MapPlacesListComponent } from './map-page/map-places-list/map-places-li
     MapFiltersComponent,
     MapSearchComponent,
     MapPlacesListComponent,
+    LineChartComponent,
+    BarGraphComponent
   ],
   imports: [
     BrowserModule,
@@ -46,8 +52,9 @@ import { MapPlacesListComponent } from './map-page/map-places-list/map-places-li
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyCP2Hh22RK96_fPIFSgIcBZ-_E48-yY4P0',
     })
+    ChartsModule
   ],
-  providers: [],
+  providers: [StatisticsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

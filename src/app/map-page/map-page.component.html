@@ -3,16 +3,19 @@
 
     <app-map-filters></app-map-filters>
 
-    <app-map-places-list></app-map-places-list>
-
+    <div>
+        <app-map-search></app-map-search>
+    </div>
 
     <!-- actual map start -->
     <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" class="map" [styles]="customStyle">
-        <app-map-search></app-map-search>
 
         <agm-marker *ngFor="let l of locations; let i = index" [latitude]="l.lat" [longitude]="l.lng">
         </agm-marker>
 
+        <agm-marker [latitude]="userLocation.lat"
 
     </agm-map>
     <!-- actual map end -->
+
+    <app-map-places-list></app-map-places-list>

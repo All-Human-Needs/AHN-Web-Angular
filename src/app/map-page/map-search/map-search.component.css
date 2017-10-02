@@ -1,6 +1,18 @@
 
 .search-bar{
     margin: 0px;
-    width: 98vw;
+    width: 100%;
     z-index: 10;
+    background-color: #DFDFDF;
+    border-color: #DFDFDF;
+    border-style: hidden;
+    border-radius: 5px;
+    height: 7vh;
+    font-size: 300%;
+    padding: 8px;
+}
+
+.search-container{
+    padding: 10px;
+    background-color: #C7C7C7;
 }

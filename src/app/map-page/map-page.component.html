@@ -1,6 +1,4 @@
 <div>
-
-
     <app-map-filters></app-map-filters>
 
     <div>
@@ -8,14 +6,15 @@
     </div>
 
     <!-- actual map start -->
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" class="map" [styles]="customStyle">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="11" class="map" [styles]="customStyle">
 
         <agm-marker *ngFor="let l of locations; let i = index" [latitude]="l.lat" [longitude]="l.lng">
         </agm-marker>
 
-        <agm-marker [latitude]="userLocation.lat"
+        <!-- !! STILL NOT WORKING !! <agm-marker [latitude]="userLocation.lat" [longitude]="userlocation.lng"></agm-marker> -->
 
     </agm-map>
     <!-- actual map end -->
 
     <app-map-places-list></app-map-places-list>
+</div>

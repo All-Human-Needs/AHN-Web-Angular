@@ -52,6 +52,7 @@ import { BarGraphComponent } from './statistics/bar-graph/bar-graph.component';
     FooterComponent,
     TabPanelComponent,
     SpreadsheetComponent,
+
     MenuIconComponent,
     SideNavComponent,
     MapFiltersComponent,
@@ -70,8 +71,10 @@ import { BarGraphComponent } from './statistics/bar-graph/bar-graph.component';
     
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyCP2Hh22RK96_fPIFSgIcBZ-_E48-yY4P0',
+
     }),
     ChartsModule,
+
   ],
   
   providers: [StatisticsService,SideNavService],

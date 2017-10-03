@@ -1,0 +1,17 @@
+.open{
+    overflow-y: hidden;
+    height: 500px; 
+
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1)
+}
+
+.closed{
+    overflow-y: hidden;
+    height: 20px;
+
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1)
+}

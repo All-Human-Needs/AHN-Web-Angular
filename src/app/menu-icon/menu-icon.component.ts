@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'menu-icon',
@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-icon.component.css']
 })
 export class MenuIconComponent implements OnInit {
-  isClicked:boolean;
   
-     onClick() {
-      this.isClicked=!this.isClicked;
+  @Output() navToggle = new EventEmitter<boolean>();
+  navOpen() {
+    this.navToggle.emit(true);
   }
     
   constructor() { }

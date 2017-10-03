@@ -1,3 +1,5 @@
+
+import { SideNavService } from './side-nav.service';
 import { Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 
 @Component({
@@ -8,6 +10,16 @@ import { Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/co
   preserveWhitespaces:false,
 })
 export class SideNavComponent{
-  @ViewChild('sidenav') sidenav:ElementRef;
 
+@ViewChild('sidenav') sideNav:ElementRef;
+  constructor(private sideNavService:SideNavService){
+    
+  }
+
+  ngAfterViewInit():void{
+    // console.log(this.sideNav);
+this.sideNavService.sideNav = this.sideNav;
+// console.log(this.sideNavService.sideNav);
+  }
+  
 }

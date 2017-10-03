@@ -12,15 +12,33 @@ import { Users } from "../users/mock-users";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  username:string;
+  password:string;
   
   constructor(private router:Router) {  }
 
   ngOnInit() {
+    
   }
 
   login():void{
+    
     //validate login
+    if(this.username==='adminB' && this.password==='admin'){
+      //go to next page
+      this.router.navigateByUrl('/business-home');
+    }else if(this.username==='adminC' && this.password==='admin'){
+      //go to next page
+      this.router.navigateByUrl('/client-home');
+    }else{
+      console.log(this.username+'\n'+this.password)
+    }
+    
+  }
 
+  googleLogin():void{
+    //validate login
+    
     //go to next page
     this.router.navigateByUrl('/client-home');
   }

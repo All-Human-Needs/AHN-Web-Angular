@@ -1,3 +1,4 @@
+import { SideNavService } from './side-nav/side-nav.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgmCoreModule } from '@agm/core';
@@ -24,7 +25,7 @@ import { SpreadsheetComponent } from './statistics/spreadsheet/spreadsheet.compo
 
 import { MenuIconComponent } from './menu-icon/menu-icon.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
-
+import { FormsModule }   from '@angular/forms';
 
 
 
@@ -66,7 +67,7 @@ import { BarGraphComponent } from './statistics/bar-graph/bar-graph.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialsModule,
-
+    FormsModule,
     
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyCP2Hh22RK96_fPIFSgIcBZ-_E48-yY4P0',
@@ -76,7 +77,7 @@ import { BarGraphComponent } from './statistics/bar-graph/bar-graph.component';
 
   ],
   
-  providers: [StatisticsService],
+  providers: [StatisticsService,SideNavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

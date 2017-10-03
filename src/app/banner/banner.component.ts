@@ -1,5 +1,5 @@
 import { SideNavComponent } from '../side-nav/side-nav.component';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MdSidenavModule } from "@angular/material";
 
 @Component({
@@ -10,15 +10,18 @@ import { MdSidenavModule } from "@angular/material";
 export class BannerComponent implements OnInit {
   title = 'All Human Needs';
 
-  @Input()
-  sidenav;
-
+  // @Input()
+  // sidenav;
+  @Output() navToggle = new EventEmitter<boolean>();
+  navOpen() {
+    this.navToggle.emit(true);
+  }
   constructor() {
 
   }
   
   ngOnInit() {
-    console.log(this.sidenav)
+    
   }
 
 }

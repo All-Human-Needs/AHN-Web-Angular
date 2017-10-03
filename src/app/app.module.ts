@@ -1,3 +1,4 @@
+import { SideNavService } from './side-nav/side-nav.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgmCoreModule } from '@agm/core';
@@ -73,7 +74,7 @@ import { BarGraphComponent } from './statistics/bar-graph/bar-graph.component';
     ChartsModule,
   ],
   
-  providers: [StatisticsService],
+  providers: [StatisticsService,SideNavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

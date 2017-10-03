@@ -1,6 +1,6 @@
 .open{
     overflow-y: hidden;
-    /* max-height: 500px; */
+    height: 500px; 
 
     transition-property: all;
     transition-duration: .4s;
@@ -9,7 +9,7 @@
 
 .closed{
     overflow-y: hidden;
-    max-height: 20px;
+    height: 20px;
 
     transition-property: all;
     transition-duration: .4s;

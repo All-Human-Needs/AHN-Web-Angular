@@ -1,0 +1,118 @@
+.login-form-background{
+    /* position: relative; */
+    width: 500px;
+    height: 600px;
+    /* left: 700px;
+    top: 24px; */
+    background: rgba(177, 177, 177, 0.8);
+    border-radius: 20px;
+    float: right;
+    margin:50px
+}
+.title{
+    
+    width: 330px;
+    font-size: 50px;
+    margin: auto;
+    margin-bottom: 220px;
+    color: #000000;
+}
+
+/* .logo{
+    position: absolute;
+    width: 166px;
+    height: 103px;
+    left: 723px;
+    top: 312px;
+    background: #56CCf2;
+} */
+.input-field{
+    width : 350px;
+    height: 50px;
+    font-size: 18px;
+    background: #FEFEFE;
+    border: 2px solid #56CCf2;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.check-label{
+    width: 96px;
+    height: 25px;
+    left: 676px;
+    top: 667px;
+    font-style: normal;
+    font-weight: normal;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+    color: #000000;
+}
+.label{
+    width: 136px;
+    height: 25px;
+    left: 832px;
+    top: 668px;
+    
+    font-size: 16px;
+    color: #000000;
+}
+
+.login-button{  
+    border: 1px solid #1BE370;
+    color: #1BE370;
+    margin-left: 74px;
+}
+
+.btn:hover{
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.btn{
+    width: 125px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.google-button{
+    color: #FF0000;
+    border: 1px solid #FF0000;
+    float: right;
+    margin-right: 74px;
+}
+
+.remember{
+    margin-left: 74px;
+}
+
+.forgot{
+    float: right;
+    margin-right: 74px;
+}
+
+.create-account{
+    margin-left: 74px;
+}
+.button{
+    margin-bottom: 5px
+}
+/* .label{
+    width: 141px;
+    height: 25px;
+    left: 830px;
+    top: 806px;
+    font-style: normal;
+    font-weight:normal;
+    line-height: normal;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+} */
+
+

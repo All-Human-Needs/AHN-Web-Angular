@@ -12,4 +12,13 @@ export class MapPlacesListComponent implements OnInit {
   ngOnInit() {
   }
 
+  //slider start
+
+  toggleOpen(){
+    var element = document.getElementById("thing");
+    element.classList.toggle("open");
+  }
+
+  //slider end
+
 }

@@ -16,7 +16,8 @@ export class BarGraphComponent implements OnInit {
   barChartLabels:any[]=[]; 
   barChartOptions:any = {
     scaleShowVerticalLines: false,
-    responsive: true
+    responsive: true,
+    
   };
   
   barChartType:string = 'bar';

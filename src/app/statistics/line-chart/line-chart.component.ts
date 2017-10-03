@@ -17,7 +17,7 @@ export class LineChartComponent implements OnInit {
 
 // lineChart initialisation
 public lineChartData:Array<any> = [
-  {data: [], label: 'Monday'},
+  {data: [], label: '',gridLines:{color:'#000',lineWidth:1}},
  
 ];
 public lineChartLabels:Array<any> = [];
@@ -27,14 +27,18 @@ public lineChartOptions:any = {
 };
 public lineChartColors:Array<any> = [
   { 
-    backgroundColor: '#f0f0f0f0',
-    borderColor: 'rgba(148,159,177,1)',
-    pointBackgroundColor: 'rgba(148,159,177,1)',
+    backgroundColor: 'rgba(98, 160, 252,0.5)',
+    borderColor: 'rgb(168, 179, 196)',
+    pointBackgroundColor: 'rgb(155, 177, 198)',
     pointBorderColor: '#fff',
-    pointHoverBackgroundColor: '#fff',
+    pointHoverBackgroundColor: 'rgb(79, 169, 255)',
     pointHoverBorderColor: 'rgba(148,159,177,0.8)',
+  }
+  
+   
+   
     
-  },
+ 
   
 ];
 public lineChartLegend:boolean = true;
@@ -57,10 +61,7 @@ public lineChartType:string = 'line';
          this.numPeople[i] = this.dailyStatistics[i].numberOfPeople;
         
        }
-       this.lineChartData = [
-         {data : this.numPeople, label : 'Tuesday'}
-       ];
-           });
+       this.lineChartData = [{data : this.numPeople, label : 'Tuesday', }];});
    }
 
   ngOnInit() {

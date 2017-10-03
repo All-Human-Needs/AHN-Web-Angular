@@ -20,9 +20,20 @@ export class LoginComponent implements OnInit {
 
   login():void{
     //validate login
+    
+    //go to next page
+    this.router.navigateByUrl('/client-home');
+  }
+
+  googleLogin():void{
+    //validate login
 
     //go to next page
     this.router.navigateByUrl('/client-home');
+  }
+
+  rememberMe():void{
+
   }
 
 }

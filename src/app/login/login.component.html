@@ -1,18 +1,30 @@
-<form id="login-form">
+
+    <div class="login-form-background">
+    <h2 class="h1 title ta-center padding-top-25 ">All Human Needs</h2>
+
     <div class="form-group">
-        <label for="Username">Username:</label>
-        <input name="username" type="text" class="form-control" id="Username" placeholder="Enter your Username or e-mail address here">
+        <input name="Username" type="text" class="form-control input-field" id="Username" placeholder=" Username ">
     </div>
 
     <div class="form-group">
-        <label for="Password">Password:</label>
-        <input name="password" type="Password" class="form-control" id="Password" placeholder="Enter your Password here">
+        <input name="Password" type="Password" class="form-control input-field" id="Password" placeholder=" Password ">
+    </div>
+    <div>
+        <input class="remember" name="rememberMe" type="checkbox" (click)="rememberMe()" /> <label for="rememberMe">Remember me?</label>
+        <a class="forgot" routerLink="/" routerLinkActive="active">Forgot Password?</a>
+    </div>
+    
+    
+    <div class="button">
+        <button type="button" class="btn login-button" (click)="login()"> Login </button>
+        <button type="button" class="btn google-button" (click)="googleLogin()"> Google Login </button>
     </div>
 
-    <div class="checkbox">
-        <label><input type="checkbox">Remember me</label>
-        <button type="button" class="btn btn-primary" (click)="login()"> Login </button>
+    
+    
+    
+    
+    <a class="create-account" routerLink="/sign-up" routerLinkActive="active">Don't have an existing account?</a>
     </div>
-    <a routerLink="/sign-in" routerLinkActive="active">Sign-in as new user?</a>
-</form>
-<ahn-footer></ahn-footer>
+    
+

@@ -1,3 +1,4 @@
+import { Location } from '@angular/compiler-cli/src/diagnostics/symbols';
 import { Component, OnInit } from '@angular/core';
 
 import { AgmCoreModule } from '@agm/core';
@@ -36,7 +37,23 @@ export class MapPageComponent implements OnInit {
     }
   ]
 
-  locations: marker[] = [
+  //start find user location
+
+  //////////////////////////////////////////////////
+  //for some demonic evil reason this stuff isn't working
+
+  // if(navigator.geolocation){
+  //   userlocation: location = {
+  //     lat: position.coords.latitude,
+  //     lng: position.coords.longitude,
+  //     name: "user location", 
+  //   }
+  // }
+  //////////////////////////////////////////////////
+
+  //end find user location
+
+  locations: location[] = [
     {
       lat: -33.9217137,
       lng: 18.46171849999996,
@@ -80,15 +97,16 @@ export class MapPageComponent implements OnInit {
 }
 
 //just making an interface for type safety sake
-interface marker {
+interface location {
   lat: number;
   lng: number;
   name: string;
 }
 
-export class GmapComponent implements OnInit {
-  
 
+
+//What was I busy doing here?
+export class GmapComponent implements OnInit {
   ngOnInit() {
   }
 }

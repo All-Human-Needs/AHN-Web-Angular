@@ -9,14 +9,17 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+
 html {
     font-size: 14px;
 }
 
 body,
 md-sidenav-container {
+
     background-image: url("./assets/img/Cape-Town.png");
     /* background-image: url("./assets/img/Cape-Town.png"); */
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
 }

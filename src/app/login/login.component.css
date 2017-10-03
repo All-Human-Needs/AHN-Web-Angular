@@ -1,3 +1,4 @@
+
 .login-form-background {
     width: 500px;
     height: 600px;
@@ -14,7 +15,6 @@
     margin-bottom: 220px;
     color: #000000;
 }
-
 
 /* .logo{
     position: absolute;
@@ -38,6 +38,7 @@
 }
 
 .check-label {
+
     width: 96px;
     height: 25px;
     left: 676px;
@@ -52,6 +53,7 @@
 }
 
 .login-button {
+
     border: 1px solid #1BE370;
     color: #1BE370;
     margin-left: 74px;
@@ -62,6 +64,7 @@
 }
 
 .btn {
+
     width: 125px;
     height: 40px;
     font-size: 18px;
@@ -72,6 +75,7 @@
 }
 
 .google-button {
+
     color: #FF0000;
     border: 1px solid #FF0000;
     float: right;
@@ -83,6 +87,7 @@
 }
 
 .forgot {
+
     float: right;
     margin-right: 74px;
 }
@@ -94,3 +99,4 @@
 .button {
     margin-bottom: 5px
 }
+

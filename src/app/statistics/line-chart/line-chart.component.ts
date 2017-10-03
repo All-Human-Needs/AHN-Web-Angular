@@ -14,6 +14,32 @@ import { StatisticsService } from './../statistics.service';
 export class LineChartComponent implements OnInit {
   dailyStatistics: DailyFootTraffic[];
   numPeople:number[]=[];
+
+// lineChart initialisation
+public lineChartData:Array<any> = [
+  {data: [], label: 'Monday'},
+ 
+];
+public lineChartLabels:Array<any> = [];
+public lineChartOptions:any = {
+  responsive: true,
+  
+};
+public lineChartColors:Array<any> = [
+  { 
+    backgroundColor: '#f0f0f0f0',
+    borderColor: 'rgba(148,159,177,1)',
+    pointBackgroundColor: 'rgba(148,159,177,1)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgba(148,159,177,0.8)',
+    
+  },
+  
+];
+public lineChartLegend:boolean = true;
+public lineChartType:string = 'line';
+
   constructor(private dailyService : StatisticsService) {}
 
   getDailyData(){
@@ -22,7 +48,6 @@ export class LineChartComponent implements OnInit {
        
        this.dailyStatistics = dailyStatistics;
        let day:any =this.dailyStatistics[0].date.getDay();
-       console.table(this.dailyStatistics);
        for(var i = 0;i<this.dailyStatistics.length;i++){
          let hours:any = this.dailyStatistics[i].date.getHours();
          let min:any = this.dailyStatistics[i].date.getMinutes();
@@ -32,50 +57,15 @@ export class LineChartComponent implements OnInit {
          this.numPeople[i] = this.dailyStatistics[i].numberOfPeople;
         
        }
-       //  console.log(this.numPeople);
-       //  console.log(this.barChartLabels);
        this.lineChartData = [
          {data : this.numPeople, label : 'Tuesday'}
        ];
            });
    }
 
- 
-
   ngOnInit() {
     this.getDailyData();
     
   }
-
- 
-  
-  
-
-  // lineChart
-  public lineChartData:Array<any> = [
-    {data: [], label: 'Monday'},
-   
-  ];
-  public lineChartLabels:Array<any> = [];
-  public lineChartOptions:any = {
-    responsive: true,
-    
-  };
-  public lineChartColors:Array<any> = [
-    { // grey
-      backgroundColor: '#f0f0f0f0',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)',
-      
-    },
-    
-  ];
-  public lineChartLegend:boolean = true;
-  public lineChartType:string = 'line';
- 
- 
   
 }

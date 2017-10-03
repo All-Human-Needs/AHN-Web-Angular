@@ -11,7 +11,7 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
   styleUrls: ["./client-home.component.css"]
 })
 export class ClientHomeComponent implements OnInit {
-  sidenav;
-  constructor(private sideNavService:SideNavService) {}
-  ngOnInit() {this.sidenav = this.sideNavService.sideNav;}
+  
+  constructor() {}
+  ngOnInit() {}
 }

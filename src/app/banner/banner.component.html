@@ -16,7 +16,8 @@
         <h1 class="navbar-brand mb-0">{{title}}</h1>
         <!-- </div> -->
         <!-- <div class="col-md-2"> -->
-        <i class="fa fa-bars fa-border fa-pull-right fa-2x " style="cursor:pointer;" aria-hidden="true" (click)="navOpen()"></i>
+        <menu-icon (navToggle)="sidenav.toggle()"></menu-icon>
+        <!-- <i class="fa fa-bars fa-border fa-pull-right fa-2x " style="cursor:pointer;" aria-hidden="true" (click)="navOpen()"></i> -->
         <!-- </div> -->
     </div>
 </nav>

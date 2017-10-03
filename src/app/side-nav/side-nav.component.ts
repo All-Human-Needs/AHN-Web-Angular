@@ -12,6 +12,7 @@ import { Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/co
 export class SideNavComponent{
 
 @ViewChild('sidenav') sideNav:ElementRef;
+
   constructor(private sideNavService:SideNavService){
     
   }

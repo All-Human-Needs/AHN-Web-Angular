@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'side-nav',
@@ -7,4 +7,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation:ViewEncapsulation.None,
   preserveWhitespaces:false,
 })
-export class SideNavComponent{}
+export class SideNavComponent{
+  @ViewChild('sidenav') sidenav:ElementRef;
+
+}

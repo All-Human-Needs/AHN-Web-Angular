@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { SideNavComponent } from '../side-nav/side-nav.component';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-client-home',
@@ -6,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client-home.component.css']
 })
 export class ClientHomeComponent implements OnInit {
-
-  constructor() { }
-
+  @ViewChild('sidenav') sidenav:ElementRef;
+  
+  constructor() {
+    
+   }
   ngOnInit() {
   }
 

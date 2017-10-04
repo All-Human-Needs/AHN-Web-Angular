@@ -56,15 +56,27 @@ export class MapPageComponent implements OnInit {
 
   //ATTEMPT 2.0 to find user location start
 
-  geolocator.config({
-    language: 'en',
-    google: {
-      version: "3",
-      key: "AIzaSyCP2Hh22RK96_fPIFSgIcBZ-_E48-yY4P0"
-    }
-  });
+  //geolocator.config(){}
+  // ({
+  //   language: 'en',
+  //   google: {
+  //     version: "3",
+  //     key: "AIzaSyCP2Hh22RK96_fPIFSgIcBZ-_E48-yY4P0"
+  //   }
+  // });
 
   //ATTEMPT 2.0 to find user location end
+
+  //ATTEMPT 3.0 to find user location start
+
+  geolocation = require('geolocation')
+
+  test = this.geolocation.getCurrentPosition(function (err, position) {
+    if (err) throw err
+    console.log(position)
+  })
+
+  //ATTEMPT 3.0 to find user location end
 
   locations: location[] = [
     {

@@ -1,5 +1,32 @@
 <div>
 
+    <script type="text/javascript" src="../../../node_modules/geolocator/dist/geolocator.min.js"></script>
+    <script type="text/javascript">
+        geolocator.config({
+            language: "en",
+            google: {
+                version: "3",
+                key: "YOUR-GOOGLE-API-KEY"
+            }
+        });
+
+        window.onload = function () {
+            var option = {
+                enableHighAccuraccy: true,
+                maximumWait: 10000,
+                maximumAge: 0,
+                fallbackToIP: true,
+                addressLookup: true,
+                map: "map",
+            }
+        }
+
+        geolocator.locate(option, function (err, location) {
+            if (err) return console.log(err);
+            console.log(location);
+        });
+    </script>
+
     <div class="map-overlay">
         <app-map-search></app-map-search>
     </div>
@@ -15,6 +42,6 @@
     </agm-map>
     <!-- actual map end -->
 
-    
+
 
 </div>

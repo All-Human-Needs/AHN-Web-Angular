@@ -14,12 +14,18 @@ export class BannerComponent implements OnInit {
   // @Input()
   //  sidenav;
   @Output() navToggle = new EventEmitter<boolean>();
+
  
   sidenav;
   constructor(private sideNavService:SideNavService) {}
   ngOnInit() {
     // console.log(this.sideNavService.sideNav);
     this.sidenav = this.sideNavService.sideNav;
+
   }
+  sidenav;
+  constructor(private sideNavService:SideNavService) {}
+  ngOnInit() {console.log(this.sideNavService.sideNav);
+    this.sidenav = this.sideNavService.sideNav;}
 
 }

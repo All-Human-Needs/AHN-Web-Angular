@@ -16,7 +16,9 @@ export class MenuIconComponent implements OnInit {
     
   sidenav;
   constructor(private sideNavService:SideNavService) {}
+
   ngOnInit() {
+
     this.sidenav = this.sideNavService.sideNav;}
 
 }

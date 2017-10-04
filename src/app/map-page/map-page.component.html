@@ -1,11 +1,11 @@
 <div>
 
-    <div>
+    <div class="map-overlay">
         <app-map-search></app-map-search>
     </div>
 
     <!-- actual map start -->
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="11" [styles]="customStyle" class="map">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="11" [styles]="customStyle" class="map" [streetViewControl]="false">
 
         <agm-marker *ngFor="let l of locations; let i = index" [latitude]="l.lat" [longitude]="l.lng">
         </agm-marker>
@@ -14,5 +14,7 @@
 
     </agm-map>
     <!-- actual map end -->
+
+    
 
 </div>

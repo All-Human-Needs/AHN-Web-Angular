@@ -1,5 +1,6 @@
 import { Location } from '@angular/compiler-cli/src/diagnostics/symbols';
 import { Component, OnInit } from '@angular/core';
+//import {Position} from 'typescript/lib/lib.dom';
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -37,21 +38,33 @@ export class MapPageComponent implements OnInit {
     }
   ]
 
-  //start find user location
-
   //////////////////////////////////////////////////
+  //start find user location
   //for some demonic evil reason this stuff isn't working
 
-  // if(navigator.geolocation){
-  //   userlocation: location = {
-  //     lat: position.coords.latitude,
-  //     lng: position.coords.longitude,
-  //     name: "user location", 
+  // userLocation: location;
+
+  // if(navigator.geolocation) {
+  //   this.userLocation = {
+  //     lat: Position.coords.latitude,
+  //     lng: Position.coords.longitude,
+  //     name: "user location",
   //   }
   // }
+  //end find user location
   //////////////////////////////////////////////////
 
-  //end find user location
+  //ATTEMPT 2.0 to find user location start
+
+  geolocator.config({
+    language: 'en',
+    google: {
+      version: "3",
+      key: "AIzaSyCP2Hh22RK96_fPIFSgIcBZ-_E48-yY4P0"
+    }
+  });
+
+  //ATTEMPT 2.0 to find user location end
 
   locations: location[] = [
     {
@@ -102,8 +115,6 @@ interface location {
   lng: number;
   name: string;
 }
-
-
 
 //What was I busy doing here?
 export class GmapComponent implements OnInit {

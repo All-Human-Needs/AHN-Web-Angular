@@ -18,16 +18,19 @@ export class MapPageComponent implements OnInit {
 
 
   filter:string;
-menuFilter(value:HTMLInputElement){
-  this.filter=value.value;
-   console.log(this.filter);
-}
 
   @Output() navToggle = new EventEmitter<boolean>();
-  
+  navOpen() {
+    this.navToggle.emit(true);
+  }
    sidenav;
    constructor(private sideNavService:SideNavService) {}
    
+   menuFilter(value:string){
+    this.sideNavService.filter=value;
+     console.log(this.sideNavService.filter);
+  }
+  
    ngOnInit() {
      
      this.sidenav = this.sideNavService.sideNav;

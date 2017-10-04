@@ -12,13 +12,29 @@ import { AgmCoreModule } from '@agm/core';
   styleUrls: ['./map-page.component.css',]
 })
 
-export class MapPageComponent implements OnInit {
+export class MapPageComponent implements OnInit{
 
   title: string = 'My first AGM project';
   lat: number = -33.924632;
   lng: number = 18.429371;
 
 
+  public userLocation;
+
+  ngOnInit() {
+
+    if (navigator.geolocation) {
+
+      navigator.geolocation.getCurrentPosition(function (place) {
+        this.userLocation = {
+          lat: 3,//place.coords.latitude,
+          lng: 3,//place.coords.longitude,
+          name: "user location",
+        }
+
+        console.log(this.userLocation);
+      })
+    }
   filter:string;
 
   @Output() navToggle = new EventEmitter<boolean>();
@@ -54,22 +70,6 @@ export class MapPageComponent implements OnInit {
       ]
     }
   ]
-
-  //start find user location
-
-  //////////////////////////////////////////////////
-  //for some demonic evil reason this stuff isn't working
-
-  // if(navigator.geolocation){
-  //   userlocation: location = {
-  //     lat: position.coords.latitude,
-  //     lng: position.coords.longitude,
-  //     name: "user location", 
-  //   }
-  // }
-  //////////////////////////////////////////////////
-
-  //end find user location
 
   locations: location[] = [
     {
@@ -121,10 +121,8 @@ interface location {
   name: string;
 }
 
-
-
-//What was I busy doing here?
-export class GmapComponent implements OnInit {
-  ngOnInit() {
-  }
-}
+// //What was I busy doing here?
+// export class GmapComponent implements OnInit {
+//   ngOnInit() {
+//   }
+// }

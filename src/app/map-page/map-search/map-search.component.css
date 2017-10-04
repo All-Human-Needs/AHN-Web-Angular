@@ -1,23 +1,27 @@
 
 .search-bar{
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 90vw;
-    z-index: 10;
-    background-color: #DFDFDF;
-    border-color: #DFDFDF;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    width: 94vw;
+    height: 20px;
     border-style: hidden;
-    border-radius: 5px;
-    height: 7vh;
-    font-size: 250%;
+    font-size: 175%;
     padding: 8px;
+    background-color: #ffffff;
 }
 
 .search-container{
     padding: 10px;
-    background-color: #C7C7C7;
+    background-color: #ffffff;
+    width: 98vw;
+    margin: 10px;
 }
 
 .search-icon{
-    font-size: 250%;
+    font-size: 175%;
+}
+
+.black-line{
+    border-left: solid 1px black;
+    height: auto;
 }

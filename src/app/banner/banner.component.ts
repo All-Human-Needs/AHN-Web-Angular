@@ -23,9 +23,5 @@ export class BannerComponent implements OnInit {
     this.sidenav = this.sideNavService.sideNav;
 
   }
-  sidenav;
-  constructor(private sideNavService:SideNavService) {}
-  ngOnInit() {console.log(this.sideNavService.sideNav);
-    this.sidenav = this.sideNavService.sideNav;}
-
+  
 }

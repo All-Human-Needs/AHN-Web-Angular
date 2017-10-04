@@ -10,7 +10,7 @@ import { AgmCoreModule } from '@agm/core';
   styleUrls: ['./map-page.component.css',]
 })
 
-export class MapPageComponent implements OnInit {
+export class MapPageComponent implements OnInit{
 
   title: string = 'My first AGM project';
   lat: number = -33.924632;
@@ -18,7 +18,22 @@ export class MapPageComponent implements OnInit {
 
   constructor() { }
 
+  public userLocation;
+
   ngOnInit() {
+
+    if (navigator.geolocation) {
+
+      navigator.geolocation.getCurrentPosition(function (place) {
+        this.userLocation = {
+          lat: 3,//place.coords.latitude,
+          lng: 3,//place.coords.longitude,
+          name: "user location",
+        }
+
+        console.log(this.userLocation);
+      })
+    }
   }
 
   customStyle = [
@@ -37,46 +52,6 @@ export class MapPageComponent implements OnInit {
       ]
     }
   ]
-
-  //////////////////////////////////////////////////
-  //start find user location
-  //for some demonic evil reason this stuff isn't working
-
-  // userLocation: location;
-
-  // if(navigator.geolocation) {
-  //   this.userLocation = {
-  //     lat: Position.coords.latitude,
-  //     lng: Position.coords.longitude,
-  //     name: "user location",
-  //   }
-  // }
-  //end find user location
-  //////////////////////////////////////////////////
-
-  //ATTEMPT 2.0 to find user location start
-
-  //geolocator.config(){}
-  // ({
-  //   language: 'en',
-  //   google: {
-  //     version: "3",
-  //     key: "AIzaSyCP2Hh22RK96_fPIFSgIcBZ-_E48-yY4P0"
-  //   }
-  // });
-
-  //ATTEMPT 2.0 to find user location end
-
-  //ATTEMPT 3.0 to find user location start
-
-  geolocation = require('geolocation')
-
-  test = this.geolocation.getCurrentPosition(function (err, position) {
-    if (err) throw err
-    console.log(position)
-  })
-
-  //ATTEMPT 3.0 to find user location end
 
   locations: location[] = [
     {
@@ -128,8 +103,8 @@ interface location {
   name: string;
 }
 
-//What was I busy doing here?
-export class GmapComponent implements OnInit {
-  ngOnInit() {
-  }
-}
+// //What was I busy doing here?
+// export class GmapComponent implements OnInit {
+//   ngOnInit() {
+//   }
+// }

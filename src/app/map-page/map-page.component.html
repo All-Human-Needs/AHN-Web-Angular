@@ -1,32 +1,5 @@
 <div>
 
-    <script type="text/javascript" src="../../../node_modules/geolocator/dist/geolocator.min.js"></script>
-    <script type="text/javascript">
-        geolocator.config({
-            language: "en",
-            google: {
-                version: "3",
-                key: "YOUR-GOOGLE-API-KEY"
-            }
-        });
-
-        window.onload = function () {
-            var option = {
-                enableHighAccuraccy: true,
-                maximumWait: 10000,
-                maximumAge: 0,
-                fallbackToIP: true,
-                addressLookup: true,
-                map: "map",
-            }
-        }
-
-        geolocator.locate(option, function (err, location) {
-            if (err) return console.log(err);
-            console.log(location);
-        });
-    </script>
-
     <div class="map-overlay">
         <app-map-search></app-map-search>
     </div>
@@ -36,6 +9,9 @@
 
         <agm-marker *ngFor="let l of locations; let i = index" [latitude]="l.lat" [longitude]="l.lng">
         </agm-marker>
+
+
+        <!-- <agm-marker [latitude]="userLocation.lat" [longitude]="userLocation.lng">{{userLocation.name}}</agm-marker> -->
 
         <!-- !! STILL NOT WORKING !! <agm-marker [latitude]="userLocation.lat" [longitude]="userlocation.lng"></agm-marker> -->
 

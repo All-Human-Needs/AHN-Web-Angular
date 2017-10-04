@@ -16,20 +16,13 @@ export class SpreadsheetComponent implements OnInit {
    dailyStatistics: DailyFootTraffic[];
   // stats:DailyFootTraffic;
 
-  constructor(private dailyService : StatisticsService) { 
-    
-  }
+  constructor(private dailyService : StatisticsService) {}
 
   getDailyStats(){
-     this.dailyService.getDailyStatistics().then( dailyStatistics=> this.dailyStatistics=dailyStatistics);
-    // this.dailyService.getDailyStatistics().then(x => {
-
-    // });
-    
+     this.dailyService.getDailyStatistics().then( dailyStatistics=> this.dailyStatistics=dailyStatistics);    
   }
   
   ngOnInit():void {
-    // console.table(this.getDailyStats());
     this.getDailyStats();
   }
 

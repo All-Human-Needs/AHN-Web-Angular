@@ -15,6 +15,11 @@
     transition: 0.4s;
 }
 
+.icon {
+    height: 30px;
+    width: 30px;
+}
+
 
 /* Rotate first bar */
 

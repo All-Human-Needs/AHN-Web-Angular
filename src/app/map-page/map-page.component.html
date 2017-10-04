@@ -4,8 +4,10 @@
         <app-map-search></app-map-search>
     </div>
 
-    <menu-icon #menu (navToggle)="sidenav.toggle()" (click)="menuFilter()" value="menu"></menu-icon>
-    <menu-icon #filter (navToggle)="sidenav.toggle()" (click)="menuFilter()" value="filter"></menu-icon>
+
+    <menu-icon class=" fa-border  menu" (navToggle)="sidenav.toggle()" (click)="menuFilter('menu')"></menu-icon>
+    <menu-icon class="fa-border  filter" (navToggle)="sidenav.toggle()" (click)="menuFilter('filter')"></menu-icon>
+
 
 
 

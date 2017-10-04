@@ -1,6 +1,8 @@
+
+import { SideNavService } from '../side-nav/side-nav.service';
 import { Location } from '@angular/compiler-cli/src/diagnostics/symbols';
-import { Component, OnInit } from '@angular/core';
-//import {Position} from 'typescript/lib/lib.dom';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -16,7 +18,6 @@ export class MapPageComponent implements OnInit{
   lat: number = -33.924632;
   lng: number = 18.429371;
 
-  constructor() { }
 
   public userLocation;
 
@@ -34,7 +35,24 @@ export class MapPageComponent implements OnInit{
         console.log(this.userLocation);
       })
     }
+  filter:string;
+
+  @Output() navToggle = new EventEmitter<boolean>();
+  navOpen() {
+    this.navToggle.emit(true);
   }
+   sidenav;
+   constructor(private sideNavService:SideNavService) {}
+   
+   menuFilter(value:string){
+    this.sideNavService.filter=value;
+     console.log(this.sideNavService.filter);
+  }
+  
+   ngOnInit() {
+     
+     this.sidenav = this.sideNavService.sideNav;
+   }
 
   customStyle = [
     {

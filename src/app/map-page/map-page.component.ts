@@ -21,20 +21,20 @@ export class MapPageComponent implements OnInit{
 
   public userLocation;
 
-  ngOnInit() {
+  // ngOnInit() {
 
-    if (navigator.geolocation) {
+  //   if (navigator.geolocation) {
 
-      navigator.geolocation.getCurrentPosition(function (place) {
-        this.userLocation = {
-          lat: 3,//place.coords.latitude,
-          lng: 3,//place.coords.longitude,
-          name: "user location",
-        }
+  //     navigator.geolocation.getCurrentPosition(function (place) {
+  //       this.userLocation = {
+  //         lat: 3,//place.coords.latitude,
+  //         lng: 3,//place.coords.longitude,
+  //         name: "user location",
+  //       }
 
-        console.log(this.userLocation);
-      })
-    }
+  //       console.log(this.userLocation);
+  //     })
+  //   }
   filter:string;
 
   @Output() navToggle = new EventEmitter<boolean>();

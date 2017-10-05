@@ -7,9 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapComponentComponent implements OnInit {
 
+  title: string = 'My first AGM project';
+  lat: number = -33.924632;
+  lng: number = 18.429371;
+
   constructor() { }
 
+  public userLocation;
+
   ngOnInit() {
+    //////////////////////////////////////////////
+    // FIND USER LOCATION START
+    if (navigator.geolocation) {
+
+      navigator.geolocation.getCurrentPosition(function (place) {
+        this.userLocation = {
+          lat: place.coords.latitude,
+          lng: place.coords.longitude,
+          name: "user location",
+        }
+        console.log(this.userLocation);
+      });
+    }
+    // FIND USER LOCATION END
+    ///////////////////////////////////////////////
   }
 
   locations: location[] = [
@@ -52,22 +73,22 @@ export class MapComponentComponent implements OnInit {
       name: 'Home Affairs Wynberg District',
     }]
 
-    customStyle = [
-      {
-        featureType: "poi",
-        elementType: "labels",
-        stylers: [
-          { visibility: "off" }
-        ]
-      },
-      {
-        featureType: "transit",
-        elementType: "labels",
-        stylers: [
-          { visibility: "off" }
-        ]
-      }
-    ]  
+  customStyle = [
+    {
+      featureType: "poi",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+    },
+    {
+      featureType: "transit",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+    }
+  ]
 
 }
 

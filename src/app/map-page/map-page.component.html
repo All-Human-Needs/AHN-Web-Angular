@@ -2,9 +2,9 @@
 
     <div class="map-overlay">
         <app-map-search></app-map-search>
+        <menu-icon class=" fa-border  menu" (navToggle)="sidenav.toggle()" (click)="menuFilter('menu')"></menu-icon>
+        <menu-icon class="fa-border  filter" (navToggle)="sidenav.toggle()" (click)="menuFilter('filter')"></menu-icon>
     </div>
 
-    <menu-icon class=" fa-border  menu" (navToggle)="sidenav.toggle()" (click)="menuFilter('menu')"></menu-icon>
-    <menu-icon class="fa-border  filter" (navToggle)="sidenav.toggle()" (click)="menuFilter('filter')"></menu-icon>
-
+    <app-map-component></app-map-component>
 </div>

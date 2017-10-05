@@ -36,6 +36,7 @@ import { MapPlacesListComponent } from './map-page/map-places-list/map-places-li
 import { ChartsModule } from 'ng2-charts';
 import { LineChartComponent } from './statistics/line-chart/line-chart.component';
 import { BarGraphComponent } from './statistics/bar-graph/bar-graph.component';
+import { MapComponentComponent } from './map-page/map-component/map-component.component';
 
 
 
@@ -60,6 +61,7 @@ import { BarGraphComponent } from './statistics/bar-graph/bar-graph.component';
     MapPlacesListComponent,
     LineChartComponent,
     BarGraphComponent,
+    MapComponentComponent,
   
   ],
   imports: [

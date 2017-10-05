@@ -11,12 +11,6 @@
     border: width border-style color;
 }
 
-
-.map-overlay{
-    position: absolute;
-    z-index: 5;
-}
-
 .menu {
     border-radius: 100%;
     z-index: 2;

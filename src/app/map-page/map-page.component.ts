@@ -23,6 +23,7 @@ export class MapPageComponent implements OnInit{
 
   // ngOnInit() {
 
+<<<<<<< HEAD
   //   if (navigator.geolocation) {
 
   //     navigator.geolocation.getCurrentPosition(function (place) {
@@ -36,6 +37,24 @@ export class MapPageComponent implements OnInit{
   //     })
   //   }
   filter:string;
+=======
+    if (navigator.geolocation) {
+      this.sidenav = this.sideNavService.sideNav;
+     
+      navigator.geolocation.getCurrentPosition(function (place) {
+        this.userLocation = {
+          lat: 3,//place.coords.latitude,
+          lng: 3,//place.coords.longitude,
+          name: "user location",
+        }
+
+        console.log(this.userLocation);
+      })
+      
+    }
+  }
+
+>>>>>>> master
 
   @Output() navToggle = new EventEmitter<boolean>();
   navOpen() {
@@ -49,10 +68,6 @@ export class MapPageComponent implements OnInit{
      console.log(this.sideNavService.filter);
   }
   
-   ngOnInit() {
-     
-     this.sidenav = this.sideNavService.sideNav;
-   }
 
   customStyle = [
     {

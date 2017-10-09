@@ -23,8 +23,10 @@ export class MapPageComponent implements OnInit {
     this.navToggle.emit(true);
   }
   
+
   sidenav;
   constructor(private sideNavService: SideNavService) { }
+
 
   menuFilter(value: string) {
     this.sideNavService.filter = value;

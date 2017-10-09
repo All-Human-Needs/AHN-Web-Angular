@@ -52,6 +52,7 @@ export class MapPageComponent implements OnInit{
      console.log(this.sideNavService.filter);
   }
   
+   
 
   customStyle = [
     {

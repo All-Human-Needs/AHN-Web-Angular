@@ -1,3 +1,4 @@
+import { InputSystemComponent } from './input-system/input-system.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from "@angular/core";
 
@@ -38,6 +39,10 @@ const routes: Routes =[
           path:'sign-in',
           component: SignInComponent
       },
+      {
+        path:'input-system',
+        component: InputSystemComponent
+    },
       
 ]
 

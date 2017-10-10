@@ -1,13 +1,12 @@
 <!-- actual map start -->
-<agm-map [latitude]="lat" [longitude]="lng" [zoom]="11" [styles]="customStyle" class="map" [streetViewControl]="false">
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" [styles]="customStyle" class="map" [streetViewControl]="false">
 
   <agm-marker *ngFor="let l of locations; let i = index" [latitude]="l.lat" [longitude]="l.lng">
+    <agm-info-window>
+      {{l.name}}
+      
+    </agm-info-window>
   </agm-marker>
-
-
-  <!-- <agm-marker [latitude]="userLocation.lat" [longitude]="userLocation.lng">{{userLocation.name}}</agm-marker> -->
-
-  <!-- !! STILL NOT WORKING !! <agm-marker [latitude]="userLocation.lat" [longitude]="userlocation.lng"></agm-marker> -->
 
 </agm-map>
 <!-- actual map end -->

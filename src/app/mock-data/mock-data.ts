@@ -10,7 +10,6 @@ export const HourlyStatistics:FootTraffic[] = [
     {id:"ad02b",date: new Date(2017,9,17,17,0,0), numberOfPeople:0},
 ]
 
-export const users:User[] = [
 export const Users:User[] = [
     {id:"ad01c",email:"admin@mail.com",password:"admin"},
     {id:"ad02b",email:"admin@mail.com",password:"admin"},

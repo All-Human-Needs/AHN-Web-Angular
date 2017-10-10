@@ -23,7 +23,7 @@ export const users:User[] = [
 ]
 
 export const registeredBusinesses:Business[] = [
-    {id:"ad01c",name:"Tester",lat:0,lng:0,maxCapacity:60},
+    {id:"ad02b",name:"Tester",lat:0,lng:0,maxCapacity:60},
    
 ]
 

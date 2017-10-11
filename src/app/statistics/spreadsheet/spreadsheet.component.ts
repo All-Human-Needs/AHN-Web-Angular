@@ -1,3 +1,5 @@
+import { FootTraffic } from '../../mock-data/mock-classes';
+import { StatsService } from '../../mock-data/stats.service';
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
@@ -13,17 +15,19 @@ import { DailyFootTraffic } from './../foot-traffic-stats';
   styleUrls: ['./spreadsheet.component.css'],
 })
 export class SpreadsheetComponent implements OnInit {
-   dailyStatistics: DailyFootTraffic[];
-  // stats:DailyFootTraffic;
 
-  constructor(private dailyService : StatisticsService) {}
+  hourlyStats:FootTraffic[];
 
-  getDailyStats(){
-     this.dailyService.getDailyStatistics().then( dailyStatistics=> this.dailyStatistics=dailyStatistics);    
+  constructor(private _statsService:StatsService) {}
+
+  getHourlyStats(){
+    this.hourlyStats =this._statsService.getSelectedHourlyBusinessStats("ad02b")
   }
   
   ngOnInit():void {
-    this.getDailyStats();
+    
+    this.getHourlyStats();
+   
   }
 
 }

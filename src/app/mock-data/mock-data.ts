@@ -30,6 +30,7 @@ export const HourlyStatistics: FootTraffic[] = [
     { id: "009", date: new Date(2017, 9, 17, 7, 30, 0), numberOfPeople: 20 },
 ]
 
+
 export const Users: User[] = [
     { id: "ad01c", email: "admin@mail.com", password: "admin" },
     { id: "ad02b", email: "admin@mail.com", password: "admin" },

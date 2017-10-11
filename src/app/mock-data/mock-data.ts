@@ -15,7 +15,7 @@ export const Users:User[] = [
     {id:"ad02b",email:"admin@mail.com",password:"admin"},
 ]
 
-export const registeredBusinesses:Business[] = [
+export const RegisteredBusinesses:Business[] = [
     {id:"ad02b",name:"Tester",lat:0,lng:0,maxCapacity:60},
    
 ]

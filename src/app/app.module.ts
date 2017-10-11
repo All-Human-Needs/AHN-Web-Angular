@@ -1,3 +1,5 @@
+import { StatsService } from './mock-data/stats.service';
+import { BusinessService } from './mock-data/business.service';
 import { UsersService } from './users/users.service';
 import { SideNavService } from './side-nav/side-nav.service';
 
@@ -82,7 +84,7 @@ import { MapComponentComponent } from './map-page/map-component/map-component.co
 
   ],
   
-  providers: [StatisticsService,SideNavService,UsersService],
+  providers: [StatisticsService,SideNavService,UsersService,BusinessService,StatsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

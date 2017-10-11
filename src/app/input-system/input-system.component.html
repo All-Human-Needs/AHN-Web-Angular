@@ -1,7 +1,9 @@
 <div class="row">
     <span class="col-md-4"></span>
     <div class="col-md-4 bg">
-
+        <select name="" id="">
+    <option *ngFor="let business of businesses" value="{business.name}">{{business.name}}</option>
+</select>
         <form>
             <!-- <button type="button" class="btn btn-primary operatorBtn" (click)="operator(1)">+</button> -->
             <!-- <br> -->

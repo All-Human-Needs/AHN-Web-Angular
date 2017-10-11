@@ -11,6 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapComponentComponent implements OnInit {
 
+  // gets array of bussinesses for the initialization of the markers
+  locations:Business[] = this.businessService.getBusinesses();
+
+  // the variables for the map itself's initialization
   title: string = 'map-blep';
   lat: number = -33.924632;
   lng: number = 18.429371;
@@ -37,9 +41,8 @@ export class MapComponentComponent implements OnInit {
     ///////////////////////////////////////////////
   }
 
-  locations:Business[] = this.businessService.getBusinesses();
-
-
+  ///////////////////////////////////////////////
+  // custom styles for removing all the markers that aren't ours
   customStyle = [
     {
       featureType: "poi",
@@ -56,5 +59,6 @@ export class MapComponentComponent implements OnInit {
       ]
     }
   ]
+  ///////////////////////////////////////////////
 
 }

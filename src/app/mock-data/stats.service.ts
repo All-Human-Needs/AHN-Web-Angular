@@ -14,17 +14,22 @@ export class StatsService{
         HourlyStatistics.push(stat);
     }
 
-    getCurrentBusinessStats(id:string):FootTraffic[]{
+    getSelectedHourlyBusinessStats(id:string):FootTraffic[]{
         var stats = HourlyStatistics;
-        var currBusinessStats:FootTraffic[];
+        var currBusinessStats:FootTraffic[]=[];
+        var count = 0;
 
         for(var i = 0;i<stats.length;i++){
-            var count = 0;
+            
             if(stats[i].id === id){
                 currBusinessStats[count]=stats[i];
                 count++;
+                
             }
+            
         }
+       
         return currBusinessStats;
     }
+
 }

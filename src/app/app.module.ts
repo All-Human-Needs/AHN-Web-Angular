@@ -1,3 +1,4 @@
+import { StatsService } from './mock-data/stats.service';
 import { SideNavService } from './side-nav/side-nav.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -81,7 +82,7 @@ import { MapComponentComponent } from './map-page/map-component/map-component.co
 
   ],
   
-  providers: [StatisticsService,SideNavService],
+  providers: [StatisticsService,SideNavService,StatsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

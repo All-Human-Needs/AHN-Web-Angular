@@ -17,7 +17,9 @@ export const Users:User[] = [
 
 export const RegisteredBusinesses:Business[] = [
     {id:"ad02b",name:"Tester",lat:0,lng:0,maxCapacity:60},
+
     {id:"",name:'Groote Schuur Hospital',lat: -33.9217137,lng: 18.46171849999996,maxCapacity:60}
+
 ]
 
 // locations: location[] = [

@@ -10,14 +10,12 @@
     margin:50px
 }
 .title{
-    
     width: 330px;
     font-size: 50px;
     margin: auto;
     margin-bottom: 220px;
     color: #000000;
 }
-
 /* .logo{
     position: absolute;
     width: 166px;
@@ -37,7 +35,6 @@
     border-radius: 10px;
     margin: 20px auto;
 }
-
 .check-label{
     width: 96px;
     height: 25px;
@@ -60,17 +57,14 @@
     font-size: 16px;
     color: #000000;
 }
-
 .login-button{  
     border: 1px solid #1BE370;
     color: #1BE370;
     margin-left: 74px;
 }
-
 .btn:hover{
     background: rgba(255, 255, 255, 0.7);
 }
-
 .btn{
     width: 125px;
     height: 40px;
@@ -86,21 +80,20 @@
     float: right;
     margin-right: 74px;
 }
-
 .remember{
     margin-left: 74px;
 }
-
 .forgot{
     float: right;
     margin-right: 74px;
 }
-
 .create-account{
     margin-left: 74px;
 }
 .button{
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    
+
 }
 /* .label{
     width: 141px;
@@ -114,5 +107,4 @@
     text-align: center;
     color: #000000;
 } */
-
 

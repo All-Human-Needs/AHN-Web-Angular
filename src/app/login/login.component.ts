@@ -10,7 +10,7 @@ import { Users } from "../users/mock-users";
   selector: 'ahn-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
-})
+})c
 export class LoginComponent implements OnInit {
   
   constructor(private router:Router) {  }

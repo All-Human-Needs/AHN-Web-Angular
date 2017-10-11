@@ -13,7 +13,7 @@ exportclass FirstTimeUserComponent implements OnInIt{
     data: FirebaseListObservable<any[]>;
 
     constructor(af: angularFireDatabase) {
-        this.data = angularFireDatabase.list('/UserDeails');
+        this.data = angularFireDatabase.list('/UserDetails');
     }
     ngOnInit() {     
     }

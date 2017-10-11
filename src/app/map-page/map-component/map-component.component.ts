@@ -1,5 +1,6 @@
+import { StatsService } from '../../mock-data/stats.service';
 import { BusinessService } from './../../mock-data/business.service';
-import { Business } from './../../mock-data/mock-classes';
+import { Business, FootTraffic } from './../../mock-data/mock-classes';
 
 import { Component, OnInit } from '@angular/core';
 
@@ -7,19 +8,19 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-map-component',
   templateUrl: './map-component.component.html',
   styleUrls: ['./map-component.component.css'],
-  providers:[BusinessService]
+  providers: [BusinessService]
 })
 export class MapComponentComponent implements OnInit {
 
   // gets array of bussinesses for the initialization of the markers
-  locations:Business[] = this.businessService.getBusinesses();
+  locations: Business[] = this.businessService.getBusinesses();
 
   // the variables for the map itself's initialization
   title: string = 'map-blep';
   lat: number = -33.924632;
   lng: number = 18.429371;
 
-  constructor(private businessService:BusinessService) { }
+  constructor(private businessService: BusinessService,private stats: StatsService) { }
 
   public userLocation;
 
@@ -39,6 +40,15 @@ export class MapComponentComponent implements OnInit {
     }
     // FIND USER LOCATION END
     ///////////////////////////////////////////////
+  }
+
+  getPeopleAtVenue(givenId: string) {
+    var selectedStats: FootTraffic[] = this.stats.getCurrentBusinessStats(givenId);
+
+    for (var i = 0; i< selectedStats.length;i++){
+
+    }
+
   }
 
   ///////////////////////////////////////////////

@@ -19,5 +19,5 @@ export class Business{
     lng:number;
     lat:number;
     maxCapacity:number;
-
+    currentPeople:number;
 }

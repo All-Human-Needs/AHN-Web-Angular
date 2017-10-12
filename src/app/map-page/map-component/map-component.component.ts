@@ -14,17 +14,26 @@ export class MapComponentComponent implements OnInit {
 
   // gets array of bussinesses for the initialization of the markers
   locations: Business[] = this.businessService.getBusinesses();
+  currentPeople: number[];
 
   // the variables for the map itself's initialization
   title: string = 'map-blep';
   lat: number = -33.924632;
   lng: number = 18.429371;
+  numPeople: number;
 
-  constructor(private businessService: BusinessService,private stats: StatsService) { }
+  constructor(private businessService: BusinessService, private stats: StatsService) { }
 
   public userLocation;
 
   ngOnInit() {
+    for(var i = 0;i<this.locations.length;i++){
+      this.currentPeople[i] = this.getCurrentPeople(this.locations[i].id);
+    }
+
+
+
+
     //////////////////////////////////////////////
     // FIND USER LOCATION START
     if (navigator.geolocation) {
@@ -40,15 +49,23 @@ export class MapComponentComponent implements OnInit {
     }
     // FIND USER LOCATION END
     ///////////////////////////////////////////////
+
+
+
   }
 
-  getPeopleAtVenue(givenId: string) {
-    var selectedStats: FootTraffic[] = this.stats.getCurrentBusinessStats(givenId);
+  getCurrentPeople(givenId: string): number {
+    var selectedStats: FootTraffic[] = this.stats.getSelectedHourlyBusinessStats(givenId);
+    var record: FootTraffic = selectedStats[0];
 
-    for (var i = 0; i< selectedStats.length;i++){
-
+    for (var i = 0; i < selectedStats.length; i++) {
+      var temprecord = selectedStats[i];
+      if (temprecord.date > record.date) {
+        record = temprecord;
+      }
     }
 
+    return record.numberOfPeople;
   }
 
   ///////////////////////////////////////////////

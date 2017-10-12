@@ -1,23 +1,22 @@
-export class FootTraffic{
-    id:string;
+export class FootTraffic {
+    id: string;
     // lat: number;
     // lng: number;
-    date : Date;
+    date: Date;
     numberOfPeople: number;
 }
 
-export class User{
-    email:string;
-    password:string;
+export class User {
+    email: string;
+    password: string;
     // isBusiness: boolean;
-    id:string;
+    id: string;
 }
 
-export class Business{
-    id:string;
-    name:string;
-    lng:number;
-    lat:number;
-    maxCapacity:number;
-    currentPeople:number;
+export class Business {
+    id: string;
+    name: string;
+    lat: number;
+    lng: number;
+    maxCapacity: number;
 }
